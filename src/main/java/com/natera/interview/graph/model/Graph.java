@@ -18,21 +18,21 @@ public interface Graph<T> {
      * Adds an edge connecting fromVertex to toVertex if one is not already present.
      * In an undirected graph, the edge will also connect toVertex to fromVertex.
      *
-     * @param fromVertex 1st vertex of edge
-     * @param toVertex   2nd vertex
+     * @param sourceVertex 1st vertex of edge
+     * @param targetVertex   2nd vertex
      * @throws IllegalArgumentException if graph does'not contains fromVertex or toVertex vertexes
      */
-    void addEdge(T fromVertex, T toVertex);
+    void addEdge(T sourceVertex, T targetVertex);
 
     /**
-     * Method finds path between {fromVertex} and {toVertex} vertices.
+     * Method finds path between {sourceVertex} and {targetVertex} vertices.
      *
-     * @param fromVertex the source of the path
-     * @param toVertex   the target of the path
+     * @param sourceVertex the source of the path
+     * @param targetVertex   the target of the path
      * @return ordered list with vertices
      * @throws IllegalStateException if path is not found
      */
-    List<T> getPath(T fromVertex, T toVertex);
+    List<T> getPath(T sourceVertex, T targetVertex);
 
     /**
      * Directed edges connect a source vertex to a target vertex,
@@ -48,4 +48,18 @@ public interface Graph<T> {
      * @throws IllegalArgumentException if consumer is null
      */
     void traverse(Consumer<T> consumer);
+
+    /**
+     * Method returns all adjacent vertices
+     *
+     * @return adjacent vertices
+     */
+    Map<T, Set<T>> getAdjacentVertices();
+
+    /**
+     * Method returns all vertices
+     *
+     * @return vertices
+     */
+    Set<T> getVertices();
 }

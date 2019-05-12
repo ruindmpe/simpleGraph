@@ -1,4 +1,4 @@
-package com.natera.interview.graph.algorithm.traverse;
+package com.natera.interview.graph.visit;
 
 import com.natera.interview.graph.model.Graph;
 
