@@ -53,7 +53,6 @@ public class Application {
     }
 }
 ```
-
 ####Graph
 ```java
 package com.natera.interview.graph.model;
@@ -122,7 +121,6 @@ public interface Graph<T> {
     Set<T> getVertices();
 }
 ```
-
 ####PathFinder
 ```java
 package com.natera.interview.graph.pathfinding;
@@ -148,7 +146,6 @@ public interface PathFinder<T> {
     List<T> findPath(Graph<T> graph, T fromVertex, T toVertex);
 }
 ```
-
 ####Traverse
 ```java
 package com.natera.interview.graph.visit;
