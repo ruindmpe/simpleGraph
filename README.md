@@ -14,6 +14,8 @@ Vertices are of a user defined type.
 
 ### Usage
 
+#### Example of usage
+
 Example of usage with graph:
 
 ```java
